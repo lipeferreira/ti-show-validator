@@ -36,4 +36,4 @@ class Validator {
 
 const validator = new Validator()
 
-export default  validator
+module.exports = validator
