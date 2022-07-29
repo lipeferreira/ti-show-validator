@@ -1,12 +1,12 @@
 {
-  "name": "validator",
+  "name": "ti-show-validator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "TI Show",
   "license": "ISC"
 }
