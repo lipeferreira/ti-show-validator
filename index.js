@@ -1,5 +1,6 @@
 class Validator {
     cpf (cpf) {
+        cpf = String(cpf)
         if (typeof cpf !== 'string') return false
         const cleanCpf = cpf.replace(/\D+/g, '')
         if (cleanCpf.length !== 11) return false
@@ -24,15 +25,15 @@ class Validator {
         firstDigit <= 9 ? secondDigit = String(secondDigit) : secondDigit = '0'
         compare = compare + secondDigit
         return cleanCpf === compare
+    }
 
+    email (email) {
+        email = String(email)
+        const regex = /\S+@\S+\.\S+/
+        return regex.test(email)
     }
 }
 
 const validator = new Validator()
 
-console.log(validator.cpf('843.607.042-91')) //true
-console.log(validator.cpf('843.607.042-92')) //false
-console.log(validator.cpf('843.607.042-9')) //false
-console.log(validator.cpf('111.111.111-11')) //false
-console.log(validator.cpf('82992401234')) //true
-console.log(validator.cpf(84360704291)) //false
+export default  validator
